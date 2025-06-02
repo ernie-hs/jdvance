@@ -1,4 +1,4 @@
-import { expect } from "./index.js";
+import expect from "./lib/index.js";
 
 expect(1).to.be.equal(1);
 expect(1).to.not.be.equal(2);
