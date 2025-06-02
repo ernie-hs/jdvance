@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import * as fs from "fs";
+import * as path from "path";
 
 var args = process.argv.slice(2);
 
@@ -16,4 +17,4 @@ if (!fs.existsSync(src)) {
     process.exit();
 }
 
-import(src);
+import(path.join(process.cwd(), src));
