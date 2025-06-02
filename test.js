@@ -1,9 +1,8 @@
-import { eq, neq } from "./index.js";
+import { expect } from "./index.js";
 
-try {
-    eq(1, 2, "jordi is king");
-    throw new Error("fuck you");
-} catch (e) {
-    if (e.message != "jordi is king") throw new Error("this is stupid");
-}
-
+expect(1).to.be.equal(1);
+expect(1).to.notEqual(2);
+expect(2).to.greaterThan(1);
+expect(1).lessThan(2);
+expect(1).to.lessThanOrEqual(1);
+expect(1).to.greaterThanOrEqual(1);
