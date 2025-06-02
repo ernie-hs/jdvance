@@ -1,0 +1,17 @@
+{
+  "name": "jdvance",
+  "version": "1.0.0",
+  "description": "the final say in asserts",
+  "keywords": [
+    "jenp",
+    "jordi",
+    "polla"
+  ],
+  "license": "MIT",
+  "author": "ernie_hs@hotmail.com",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  }
+}
