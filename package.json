@@ -1,6 +1,6 @@
 {
   "name": "jdvance",
-  "version": "2.0.7",
+  "version": "2.0.8-SNAPSHOT",
   "description": "the final say in asserts",
   "keywords": [
     "jenp",
@@ -15,6 +15,9 @@
   },
   "main": "./lib/index.js",
   "scripts": {
-    "test": "npm exec jdvance ./test.js"
+    "test": "npm exec jdvance"
+  },
+  "dependencies": {
+    "glob": "^11.0.2"
   }
 }

@@ -1,20 +1,11 @@
 #!/usr/bin/env node
-import * as fs from "fs";
 import * as path from "path";
+import { glob } from "glob";
 
-var args = process.argv.slice(2);
-
-if (args.length !== 1) {
-    console.log("requires 1 argument");
-    console.log("jdvance [file]");
-    process.exit();
-}
-
-const src = args[0];
-
-if (!fs.existsSync(src)) {
-    console.log("file doesn't exist: ", src);
-    process.exit();
-}
-
-import(path.join(process.cwd(), src));
+glob("**/*.js", (err, files) => {
+    if (err) return console.error(err);
+    files.forEach(f => {
+        console.log(`file ${f}`);
+        import(path.join(process.cwd(), f));
+    });
+});
