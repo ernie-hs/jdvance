@@ -1,4 +1,4 @@
-import { it, expect } from "./lib/index.js";
+import { it, expect } from "../lib/index.js";
 
 it("is empty");
 

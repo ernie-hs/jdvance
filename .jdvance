@@ -1,4 +1,3 @@
 {
-    "src": ".",
-    "pattern": "./**/*test.js"
+    "pattern": "test/**/*test.js"
 }
