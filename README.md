@@ -32,3 +32,13 @@ it("shood say pleeze", () => {
 now you apologise and show respect for the kremlin.
 
 da
+
+# backlog
+
+- apowogize
+- randomize pweeze actions
+- add special kremlin override
+- orange font
+- global/scoped counter for tests run
+- elon arguments
+- panama/epstein metrics override aggregate starship
