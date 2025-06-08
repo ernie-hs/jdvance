@@ -1,3 +1,4 @@
 {
-    "pattern": "test/**/*test.js"
+    "testDir": "./test",
+    "endsWith": "test.js"
 }

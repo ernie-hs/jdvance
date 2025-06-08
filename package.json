@@ -24,6 +24,5 @@
     "test": "npm exec jdvance"
   },
   "dependencies": {
-    "glob": "^11.0.2"
   }
 }
