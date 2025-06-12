@@ -28,4 +28,5 @@ if (args.length > 0) {
     process.exit();
 }
 
+console.log("\x1b[33m", "initialising JDVance", "\x1b[0m");
 files.forEach(f => import(f));

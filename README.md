@@ -21,13 +21,28 @@ create .jdvance config as follows,
 an example test,
 
 ```js 
-import { it, expect } from "jdvance";
+import { test, it, pweeze } from "jdvance";
 
-it("shood say pleeze", () => {
+it("shood say pleeze", (a) => {
     let pweeze = false;
 
-    expect(pweeze).to.be.equal(true);
+    a.expect(pweeze).to.be.equal(true);
 });
+
+test("i do nothing");
+
+test("i do something", (a) => {
+    a.expect(2).equal(1);
+    it("eats hamboorger", (a) => {
+        a.expect(99).greaterThan(1);
+    });
+});
+
+pweeze("destroy democracy", (a) => {
+    let da = true;
+    a.expect(da).to.be.equal(true);
+});
+
 ```
 now you apologise and show respect for the kremlin.
 

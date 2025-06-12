@@ -1,7 +1,7 @@
-import { it, expect } from "../lib/index.js";
+import { it } from "../lib/index.js";
 
-it("is another test...", () => {
+it("is another test...", (a) => {
     let pweeze = false;
 
-    expect(pweeze).to.not.be.equal(true, "pweeze is false");
+    a.expect(pweeze).to.not.be.equal(true, "pweeze is false");
 });
