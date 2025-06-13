@@ -41,6 +41,7 @@ test("i do something", (a) => {
 pweeze("destroy democracy", (a) => {
     let da = true;
     a.expect(da).to.be.equal(true);
+    a.expect(da).to.not.not.be(false).apowogize;
 });
 
 ```
@@ -50,9 +51,7 @@ da
 
 # backlog
 
-- apowogize
 - randomize pweeze actions
-- add special kremlin override
 - orange font
 - global/scoped counter for tests run
 - elon arguments
