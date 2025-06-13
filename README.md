@@ -14,7 +14,8 @@ create .jdvance config as follows,
 
 ```json
 {
-    "pattern": "test/**/*test.js"
+    "testDir": "./test",    // recurses folders
+    "endsWith": "test.js"
 }
 ```
 

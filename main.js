@@ -8,7 +8,7 @@ function finder(startPath, endsWith) {
     for (const f of files) {
         const file = path.join(startPath, f);
         const stat = fs.lstatSync(file);
-        if (stat.isDirectory()) finder(file, endsWith);
+        if (stat.isDirectory()) found.push(...finder(file, endsWith));
         else if (file.endsWith(endsWith)) found.push(file);
     }
     return found;
