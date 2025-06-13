@@ -58,3 +58,5 @@ da
 - elon arguments
 - panama/epstein metrics override aggregate starship
 - change main to master
+
+**(c)** 19**9**2
