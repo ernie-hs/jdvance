@@ -14,19 +14,26 @@ function finder(startPath, endsWith) {
     return found;
 }
 
+function windaz(s) {
+    const idx = s.indexOf(":");
+    return (idx != -1 ? s.slice(idx + 1) : s).replace(/\\/g, '/');
+}
+
 const files = [];
 const args = process.argv.slice(2);
 const config = JSON.parse(fs.readFileSync(".jdvance", "utf8"));
+const cwd = process.cwd();
 
 if (args.length > 0) {
-    args.forEach(f => files.push(path.join(process.cwd(), f)));
+    args.forEach(f => files.push(windaz(path.join(cwd, f))));
 } else if (config.testDir && config.endsWith) {
     const ffs = finder(config.testDir, config.endsWith);
-    ffs.forEach(f => files.push(path.join(process.cwd(), f)));
+    ffs.forEach(f => files.push(windaz(path.join(cwd, f))));
 } else {
     console.log("pweeze give at least one argument or, a corrcet confwig file.  Now apologize");
     process.exit();
 }
 
 console.log("\x1b[33m", "initialising JDVance", "\x1b[0m");
+console.log(files);
 files.forEach(f => import(f));
