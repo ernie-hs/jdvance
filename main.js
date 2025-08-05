@@ -19,9 +19,17 @@ function windaz(s) {
     return (idx != -1 ? s.slice(idx + 1) : s).replace(/\\/g, '/');
 }
 
+function whatever() {
+    try {
+        return JSON.parse(fs.readFileSync(".jdvance", "utf8"));
+    } catch (e) {
+        return {};
+    }
+}
+
 const files = [];
 const args = process.argv.slice(2);
-const config = JSON.parse(fs.readFileSync(".jdvance", "utf8"));
+const config = whatever();
 const cwd = process.cwd();
 
 if (args.length > 0) {
